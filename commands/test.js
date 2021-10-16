@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports.run = async (client, inter) => {
 
-    console.log('kaaas')
+    console.log('kaas');
 
 }
 
