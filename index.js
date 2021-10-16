@@ -18,6 +18,7 @@ module.exports.client = client
 fs.readdirSync('./commands/').forEach(dir => {
     fs.readdir(`./commands/${dir}`, (err, files) => {
         if(err) throw err;
+        console.log(err)
 
         var jsFiles = files.filter(f => f.split(".").pop() === "js");
         
