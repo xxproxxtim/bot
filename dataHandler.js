@@ -81,7 +81,13 @@ async function createCmd(client, guildId){
         },
         {
             name: 'close',
-            description: 'Sluit een ticket'
+            description: 'Maakt een toevoeging voor onze gesloten ticket!',
+            options: [{
+                name: 'close-text',
+                type: 'STRING',
+                required: true,
+                description: 'Vul hier je close-text in!'
+            }]
         },
         {
             name: 'add',
