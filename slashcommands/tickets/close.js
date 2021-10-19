@@ -15,6 +15,7 @@ module.exports.run = async (client, inter) => {
     const thanksEmbed = new Discord.MessageEmbed()
             .setTimestamp()
             .setTitle('Gesloten')
+            .setDescription('Ticket gesloten!')
             .addField('Toevoeging', closeinfo)
             .setColor('RANDOM')
     inter.user.send({ embeds: [thanksEmbed] })
