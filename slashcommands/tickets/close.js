@@ -11,19 +11,20 @@ module.exports.run = async (client, inter) => {
     }
 
     await inter.reply(`Deze ticket is succesvol gesloten en zal zo worden verwijderd!`)
+
+    const thanksEmbed = new Discord.MessageEmbed()
+            .setTimestamp()
+            .setTitle('Gesloten')
+            .addField('Toevoeging', closeinfo)
+            .setColor('RANDOM')
+    inter.user.send({ embeds: [thanksEmbed] })
     
     db.delete(`ticket_${inter.user.id}`)
     db.delete(`ticketChannel_${inter.channelId}`)
     
     setTimeout(() => {
         inter.channel.delete()
-    }, 5000)
-
-    const thanksEmbed = new Discord.MessageEmbed()
-            .setTimestamp()
-            .addField('Toevoeging', closeinfo)
-            .setColor('RANDOM')
-    inter.channelId.send({ embeds: [thanksEmbed] })
+    }, 1000)
     
 }
 
