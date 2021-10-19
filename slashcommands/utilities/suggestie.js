@@ -14,9 +14,7 @@ module.exports.run = async (client, inter) => {
         .setColor('RANDOM')
         .addField(`Ingestuurde Suggestie:`, suggestie)
         .setTimestamp()
-    channel.send({ embeds: [embed] }).react(message.guild.emojis.cache.get('900035970211143740')),
-    (message.guild.emojis.cache.get('900036334423519252')),
-    (message.guild.emojis.cache.get('900036893683638292'))
+    channel.send({embeds: [embed] })
 
     const replied = new Discord.MessageEmbed()
         .setDescription(`Je suggestie is succesvol verstuurd naar: ${channel}!`)

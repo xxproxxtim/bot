@@ -7,6 +7,9 @@ module.exports.run = async (client, inter) => {
     const tickttoevoeging = inter.options.getString('text');
     const option = inter.options.getString('perms');
 
+    const channel = client.channels.cache.find(c => c.id === "880905698777628742")
+    if(channel === undefined) return
+
     if(db.get(`ticket_${inter.user.id}`) === true){
         return await inter.reply(`Je mag geen ticket aanmaken omdat je er al een open hebt!`)
     }
