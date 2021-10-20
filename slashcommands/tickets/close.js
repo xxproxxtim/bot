@@ -20,7 +20,7 @@ module.exports.run = async (client, inter) => {
         .setTitle('Gesloten')
         .setDescription(`Ticket gesloten door ${inter.user.username}`)
         .addField('Toevoeging', closeinfo)
-        .addField(`Naam`, inter.channelId)
+        .addField(`Ticket id`, inter.channelId)
         .setColor('RANDOM')
         .setFooter(`Gesloten door ${inter.user.username}`)
     channel.send({ embeds: [thanksEmbed] })
