@@ -40,9 +40,6 @@ module.exports.run = async (client, inter) => {
             .setFooter(`Gemaakt door ${inter.user.username}`)
         c.send({ content: `<@!${inter.user.id}> iemand ons staff-team komt je helpen!`, embeds: [thanksEmbed] })
 
-        db.set(`ticket_${inter.user.id}`, true)
-        db.set(`ticketChannel_${c.id}`, true)
-
     })
     }
 
@@ -75,9 +72,6 @@ module.exports.run = async (client, inter) => {
             .setFooter(`Gemaakt door ${inter.user.username}`)
         c.send({ content: `<@!${inter.user.id}> iemand ons staff-team komt je helpen!`, embeds: [thanksEmbed] })
 
-        db.set(`ticket_${inter.user.id}`, true)
-        db.set(`ticketChannel_${c.id}`, true)
-
     })
     }
 
@@ -109,9 +103,6 @@ module.exports.run = async (client, inter) => {
             .addField('Toevoeging', tickttoevoeging)
             .setFooter(`Gemaakt door ${inter.user.username}`)
         c.send({ content: `<@!${inter.user.id}> iemand ons staff-team komt je helpen!`, embeds: [thanksEmbed] })
-
-        db.set(`ticket_${inter.user.id}`, true)
-        db.set(`ticketChannel_${c.id}`, true)
 
     })
     }
@@ -153,9 +144,6 @@ module.exports.run = async (client, inter) => {
             .setFooter(`Gemaakt door ${inter.user.username}`)
         c.send({ content: `<@!${inter.user.id}> iemand ons staff-team komt je helpen!`, embeds: [thanksEmbed] })
 
-        db.set(`ticket_${inter.user.id}`, true)
-        db.set(`ticketChannel_${c.id}`, true)
-
     })
     }
 
@@ -193,11 +181,11 @@ module.exports.run = async (client, inter) => {
             .setFooter(`Gemaakt door ${inter.user.username}`)
         c.send({ content: `<@!${inter.user.id}> iemand ons staff-team komt je helpen!`, embeds: [thanksEmbed] })
 
-        db.set(`ticket_${inter.user.id}`, true)
-        db.set(`ticketChannel_${c.id}`, true)
-
     })
     }
+
+    db.set(`ticket_${inter.user.id}`, true)
+    db.set(`ticketChannel_${c.id}`, true)
 
 }
 
