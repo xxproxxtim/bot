@@ -9,6 +9,10 @@ client.on("ready", async () => {
     console.log(`${client.user.username} is online.`);
  
     client.user.setActivity("Amsterdam rolePlay", { type: "PLAYING" });
+
+    const guild = client.guilds.cache.get('830722201996492820');
+
+    client.user.setActivity(`Members: ${guild.memberCount}`, {type: "WATCHING"});
  
 });
 
