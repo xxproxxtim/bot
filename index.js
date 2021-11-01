@@ -8,7 +8,7 @@ client.on("ready", async () => {
  
     console.log(`${client.user.username} is online.`);
  
-    client.user.setActivity("Staff hulp", { type: "PLAYING" });
+    client.user.setActivity("Amsterdam rolePlay", { type: "PLAYING" });
  
 });
 
