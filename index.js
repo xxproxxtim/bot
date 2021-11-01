@@ -4,8 +4,12 @@ const client = new Client({ intents: [Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS
 
 const fs = require('fs');
 
-client.on('ready', () => {
-    console.log('Ingelogd')
+client.on("ready", async () => {
+ 
+    console.log(`${client.user.username} is online.`);
+ 
+    client.user.setActivity("Staff hulp", { type: "PLAYING" });
+ 
 });
 
 client.commands = new Discord.Collection();
